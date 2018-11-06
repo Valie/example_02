@@ -1,0 +1,14 @@
+#把原有的application.properties删掉。然后一定要执行一下【mvn -X clean install】才生效
+#多环境配置文件的命名规则：application-{profile}.yml
+
+spring:
+  application:
+    name: ribbonService #服务命名, 注意：不能使用下划线等
+
+server:
+  port: 9000  #服务端口
+
+eureka:
+  client:
+    service-url:
+      defaultZone: http://localhost:1111/eureka/  #指定注册中心地址

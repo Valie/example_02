@@ -1,0 +1,14 @@
+#把原有的application.properties删掉。然后一定要执行一下【mvn -X clean install】才生效
+#多环境配置文件的命名规则：application-{profile}.yml
+
+server:
+  port: 8180  #服务的端口
+
+spring:
+  application:
+    name: aService #服务命名, 注意：不能使用下划线等
+
+eureka:
+    client:
+      service-url:
+        defaultZone: http://localhost:1111/eureka/ #指定服务注册中心的地址
